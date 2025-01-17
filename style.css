@@ -1,15 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
+  --pastel: #fefcc1;
+  --cyan: #e0ffff;
+  --alice: #f0f8ff;
   --yellow: #ffba00;
-  --black: #2b2b2b;
+  --black: #282828;
+}
+
+/* width */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #ffba00;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #ffba00;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+}
+
+* {
+  font-family: "Poppins", serif;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-color: var(--black);
+}
+
+section {
+  min-height: 100vh;
+  background-color: white;
 }
 
 .text-y {
   color: var(--yellow);
 }
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
 
 .whatsapp-container {
   position: fixed;
@@ -58,7 +105,6 @@ body {
   }
 }
 
-
 /* Bubble chat */
 .whatsapp-chat {
   display: none;
@@ -104,16 +150,289 @@ body {
   height: 30px;
   border-radius: 100%;
 }
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+.head-bar {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
 .head-logo {
   background-color: white;
   padding: 10px 30px;
+  margin: auto;
   width: min-content;
   display: flex;
   justify-content: center;
   border-radius: 0 0 15px 15px;
+  position: fixed;
+  left: 50%; /* Menempatkan di tengah horizontal */
+  transform: translateX(-50%); /* Menyesuaikan posisi agar tepat di tengah */
+  z-index: 9999;
+  border-right: 2px var(--yellow) solid;
+  border-bottom: 2px var(--yellow) solid;
+  border-left: 2px var(--yellow) solid;
+  border-top: none; /* Bagian atas tanpa border */
 }
 
 .head-logo img {
-  max-width: clamp(140px, 15vw, 210px);
+  max-width: clamp(120px, 15vw, 150px);
+}
+
+#hero {
+  position: relative;
+  background-color: #282828; /* Warna latar */
+  background-image: url("/assets/hero-bg.jpg"); /* Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: 100vh; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282828;
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#hero > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+.hero-img {
+  max-width: clamp(300px, 25vw, 800px);
+  z-index: 2;
+  margin-top: 50px;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.hero-img:hover {
+  animation: rotateAnimation 1s ease-in-out 1;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.platform-title {
+  font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran antara 1rem hingga 2.5rem */
+}
+
+.umrah-title {
+  font-size: clamp(2rem, 4vw, 5rem); /* Ukuran antara 2rem hingga 5rem */
+  font-weight: bold;
+}
+
+.indonesia-title {
+  font-size: clamp(1.5rem, 3vw, 4rem); /* Ukuran antara 1.5rem hingga 4rem */
+}
+
+#hero-description {
+  text-align: justify;
+  display: inline-block; /* Untuk mempertahankan inline layout */
+  min-height: 60px; /* Sesuaikan dengan kebutuhan */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+#middle {
+  position: relative;
+  background-color: var(--alice); /* Warna latar */
+  /* background-image: url('/assets/middle-bg.jpg'); Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: 100vh; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#middle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--alice);
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#middle > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+.problem-list {
+  list-style-type: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+
+.problem-list li {
+  position: relative;
+  padding-left: 25px; /* Memberi ruang untuk tanda silang */
+  margin-bottom: 10px;
+}
+
+.problem-list li::before {
+  content: "✖"; /* Tanda silang */
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.solution-list {
+  list-style-type: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+
+.solution-list li {
+  position: relative;
+  padding-left: 30px; /* Ruang untuk ikon */
+  margin-bottom: 10px;
+}
+
+.solution-list li::before {
+  content: "✨"; /* Ikon centang bersinar */
+  color: #ffa500; /* Warna emas/oranye */
+  font-size: 1.2rem; /* Ukuran ikon */
+  position: absolute;
+  left: 0;
+}
+
+.why-img {
+  width: clamp(80px, 25vw, 200px);
+  transition: transform 0.8s ease;
+}
+
+.card {
+  animation: 0.8s;
+}
+
+.card:hover .why-img {
+  transform: scale(1.2); /* Zoom-in */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+#last {
+  position: relative;
+  background-color: var(--pastel); /* Warna latar */
+  /* background-image: url('/assets/last-bg.jpg'); Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: 100vh; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#last::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pastel);
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#last > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+.des-img {
+  width: clamp(80px, 25vw, 200px);
+  transition: transform 0.8s ease;
+}
+
+.hope-list {
+  list-style-type: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+
+.hope-list li {
+  position: relative;
+  padding-left: 30px; /* Ruang untuk ikon */
+  margin-bottom: 10px;
+}
+
+.hope-list li::before {
+  content: "🎯"; /* Ikon centang bersinar */
+  color: #ffa500; /* Warna emas/oranye */
+  font-size: 1.2rem; /* Ukuran ikon */
+  position: absolute;
+  left: 0;
+}
+
+.headline {
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Ukuran fleksibel dari kecil ke besar */
+  font-weight: bold; /* Membuat teks tebal */
+  text-align: center; /* Teks berada di tengah */
+  margin: 20px 0; /* Jarak atas dan bawah */
+  color: #333; /* Warna teks (ubah sesuai kebutuhan) */
+  line-height: 1.5; /* Spasi antar baris */
+}
+
+.rotating-icon {
+  display: inline-block;
+  font-size: 2rem; /* Ukuran ikon */
+  animation: rotate-loop 1s infinite ease-in-out;
+}
+
+@keyframes rotate-loop {
+  0% {
+    transform: rotate(0deg); /* Posisi awal */
+  }
+  20% {
+    transform: rotate(15deg); /* Putar kanan */
+  }
+  40% {
+    transform: rotate(0deg); /* Kembali ke posisi awal */
+  }
+  60% {
+    transform: rotate(-15deg); /* Putar kiri */
+  }
+  80% {
+    transform: rotate(0deg); /* Kembali ke posisi awal */
+  }
+  100% {
+    transform: rotate(0deg); /* Diam (jeda) */
+  }
 }
