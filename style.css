@@ -436,3 +436,16 @@ section {
     transform: rotate(0deg); /* Diam (jeda) */
   }
 }
+
+
+
+
+.footer {
+  position: relative;
+  background-color: #282828; /* Latar belakang abu-abu gelap */
+  color: #ffffff; /* Teks putih */
+  text-align: center; /* Teks di tengah */
+  padding: 20px 0; /* Jarak atas dan bawah */
+  font-size: 14px; /* Ukuran teks */
+  font-family: Arial, sans-serif; /* Font yang sederhana */
+}

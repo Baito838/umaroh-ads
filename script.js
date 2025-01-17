@@ -23,3 +23,5 @@ function typeWriter(elementId, text, speed) {
     }
     write(); // Memulai penulisan
 }
+// JavaScript untuk menampilkan tahun saat ini
+document.getElementById("year").textContent = new Date().getFullYear();
