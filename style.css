@@ -743,6 +743,6 @@ section {
 
 
 .carousel-item a img {
-  border-radius: 15px;
+  border-radius: 0.375rem;
   height: 300px;
 }
