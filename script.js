@@ -82,7 +82,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
         },
 
         subtitle: {
-            text: 'Data dari <a target="_blank" href="https://satudata.kemenag.go.id">Kementerian Agama</a>'
+            text: 'Data dari <a target="_blank" href="https://satudata.kemenag.go.id">Kementerian Agama</a> Tahun 2023.'
         },
 
         mapNavigation: {
