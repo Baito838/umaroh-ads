@@ -485,6 +485,19 @@ section {
   line-height: 1.5; /* Spasi antar baris */
 }
 
+.headline-2 {
+  font-size: clamp(
+    0.8rem,
+    5vw,
+    1.5rem
+  ); /* Ukuran fleksibel dari kecil ke besar */
+  font-weight: bold; /* Membuat teks tebal */
+  text-align: center; /* Teks berada di tengah */
+  margin: 20px 0; /* Jarak atas dan bawah */
+  color: #333; /* Warna teks (ubah sesuai kebutuhan) */
+  line-height: 1.5; /* Spasi antar baris */
+}
+
 .rotating-icon {
   display: inline-block;
   font-size: 2rem; /* Ukuran ikon */
