@@ -659,6 +659,7 @@ section {
 .timeline ul li .descr {
   background: var(--bgColor);
   position: relative;
+  text-align: justify;
   padding-inline: 1.5rem;
 }
 .timeline ul li .title {
