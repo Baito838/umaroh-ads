@@ -85,6 +85,7 @@ section {
   z-index: 1000;
 }
 
+
 /* Bubble WhatsApp utama */
 .whatsapp-bubble {
   display: flex;
@@ -96,6 +97,7 @@ section {
   cursor: pointer;
   animation: shake 2s infinite;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .whatsapp-bubble:hover {
