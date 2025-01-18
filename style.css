@@ -38,7 +38,12 @@
   font-family: "Poppins", serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 
@@ -82,22 +87,33 @@ section {
 
 /* Bubble WhatsApp utama */
 .whatsapp-bubble {
-  width: 60px;
-  height: 60px;
-  background-color: #25d366;
-  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #25d366;
+  padding: 10px 20px;
+  border-radius: 30px; /* Membuat bentuk rounded */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   animation: shake 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-bubble:hover {
+  background-color: #22b859; /* Warna hijau lebih gelap saat hover */
 }
 
 .whatsapp-bubble img {
   width: 35px;
   height: 35px;
+  margin-right: 10px; /* Jarak antara ikon dan teks */
 }
+
+.whatsapp-bubble .whatsapp-text {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
 
 .seru {
   display: inline-block;
@@ -352,7 +368,7 @@ section {
 
 #middle {
   background-color: var(--alice); /* Warna latar */
-/* Jangan ulang gambar */
+  /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
   min-height: 100vh; /* Tinggi penuh viewport */
@@ -562,7 +578,6 @@ section {
   }
 }
 
-
 .owner {
   width: 100%;
   max-height: 500px;
@@ -579,11 +594,11 @@ section {
   font-size: 18px;
   font-weight: bold;
   color: #2b2b2b;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .bg-owner {
-  background-color: #ffba00;;
+  background-color: #ffba00;
   padding: 5px 10px;
   border-radius: 15px;
 }
@@ -753,8 +768,8 @@ section {
   margin-left: -10px;
 }
 
-
 .carousel-item a img {
   border-radius: 0.375rem;
+  width: clamp(250, 25vw, 100%);
   height: 300px;
 }
