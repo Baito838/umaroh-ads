@@ -278,5 +278,35 @@ lightbox.option({
 });
 
 
+var pertumbuhanUmrah = {
+    chart: {
+        type: 'line',
+        height: 350
+    },
+    series: [{
+        name: 'Jamaah Umrah',
+        data: [957016, 1368616, 1833164, 2537501, 3514825, 4864151, 6731582, 9319703, 12896381]
+    }],
+    xaxis: {
+        categories: ['2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030']
+    },
+    yaxis: {
+        labels: {
+            formatter: function(value) {
+                return value.toLocaleString('id');  // Format angka menjadi format ribuan
+            }
+        }
+    },
+    title: {
+        text: 'Perkiraan Perkembangan Jamaah Umrah',
+        align: 'center'
+    }
+};
+
+var chartpertumbuhanUmrah = new ApexCharts(document.querySelector("#pertumbuhanUmrah"), pertumbuhanUmrah);
+chartpertumbuhanUmrah.render();
+
+
+
 
 

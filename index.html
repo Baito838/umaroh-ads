@@ -101,39 +101,6 @@
     </section>
 
     <section id="statistic" class="py-5 px-lg-5 px-3">
-      <div id="containerMap"></div>
-      <div class="row">
-        <div class="col-md-6" data-aos="zoom-in-up" data-aos-duration="3000">
-          <h5 class="text-center">Data Haji</h5>
-          <p class="text-center">
-            Data jamaah haji 2022 (100.051) sampai 2023 (203.320) kenaikan
-            mencapai 103.22%. Data Diambil dari
-            <a
-              target="_blank"
-              href="https://satudata.kemenag.go.id/dataset/detail/perkembangan-kuota-jemaah-haji-menurut-provinsi"
-              >KEMENAG</a
-            ><br />ketuk <i class="bx bxs-hand"></i> dan geser untuk melihat
-            provinsi
-          </p>
-          <div id="dataJamaah"></div>
-        </div>
-        <div class="col-md-6" data-aos="zoom-in-up" data-aos-duration="3000">
-          <h5 class="text-center">Data Umrah</h5>
-          <p class="text-center">
-            Data jamaah haji 2022 (957.016), 2023 (1.368.616) & 2024 (1.833.164)
-            kenaikan mencapai 43,0% dan 33,9%. Data Diambil dari
-            <a
-              target="_blank"
-              href="https://haji.kemenag.go.id/v5/detail/1-8-juta-jemaah-haji-2024-63-dari-asia-1"
-              >KEMENAG</a
-            >.
-          </p>
-          <div id="forcast"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="problem" class="py-5 px-lg-5 px-3">
       <div class="container">
         <div class="row">
           <h1
@@ -268,6 +235,49 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="py-5 px-lg-5 px-3">
+      <h3 class="text-center">Data Statistik Jamaah</h3>
+      <div id="containerMap"></div>
+      <div class="row">
+        <div class="col-md-6 px-1 px-lg-3" data-aos="zoom-in-up" data-aos-duration="3000">
+          <div class="card p-3">
+            <h5 class="text-center mb-3">Data Haji</h5>
+          <p class="text-center">
+            Data jamaah haji 2022 (100.051) sampai 2023 (203.320) kenaikan
+            mencapai 103.22%. Data Diambil dari
+            <a
+              target="_blank"
+              href="https://satudata.kemenag.go.id/dataset/detail/perkembangan-kuota-jemaah-haji-menurut-provinsi"
+              >KEMENAG</a
+            ><br />Ketuk <i class="bx bxs-hand"></i> dan geser untuk melihat
+            provinsi.
+          </p>
+          <div id="dataJamaah"></div>
+          </div>
+        </div>
+        <div class="col-md-6 px-1 px-lg-3" data-aos="zoom-in-up" data-aos-duration="3000">
+          <div class="card p-3">
+            <h5 class="text-center mb-3">Data Umrah</h5>
+            <p class="text-center">
+              Data jamaah umrah 2022 (957.016), 2023 (1.368.616) & 2024 (1.833.164)
+              kenaikan mencapai 43,0% dan 33,9%. Data Diambil dari
+              <a
+                target="_blank"
+                href="https://satudata.kemenag.go.id/dataset/detail/perkembangan-kuota-jemaah-haji-menurut-provinsi"
+                >KEMENAG</a
+              >. <br />Ketuk bar untuk melihat data.
+            </p>
+            <div id="forcast"></div>
+          </div>
+        </div>
+        <div class="col-md-12 px-1 px-lg-3 my-3">
+          <div class="card p-3">
+            <div id="pertumbuhanUmrah"></div>
           </div>
         </div>
       </div>
@@ -784,7 +794,6 @@
         href="https://linktr.ee/umaroh.indonesia"
         target="_blank"
         class="whatsapp-bubble"
-        style="decoration: none;"
       >
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
