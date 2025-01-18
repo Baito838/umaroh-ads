@@ -29,7 +29,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 
 (async () => {
-
     const topology = await fetch(
         'https://code.highcharts.com/mapdata/countries/id/id-all.topo.json'
     ).then(response => response.json());
@@ -68,17 +67,14 @@ document.getElementById("year").textContent = new Date().getFullYear();
         ['id-sr', 1217968],     // Sulawesi Barat
         ['id-ma', 1007051],     // Maluku
         ['id-la', 1020356],     // Maluku Utara
-        ['id-ib', 317805],      // Papua Barat
-        ['id-pa', 162796],      // Papua      
+        ['id-ib', 533344],      // Papua Barat
+        ['id-pa', 567038],      // Papua
     ];
 
-    console.log('Data Provinsi dan Populasi:', data);
-
-    // Create the chart
     Highcharts.mapChart('containerMap', {
         chart: {
             map: topology,
-            backgroundColor: 'transparent'  // Membuat background peta transparan
+            backgroundColor: 'transparent'
         },
 
         title: {
@@ -86,7 +82,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
         },
 
         subtitle: {
-            text: 'Data ini diambil dari <a target="_blank" style="decoration: none;" href="https://satudata.kemenag.go.id/dataset/detail/jumlah-penduduk-menurut-agama" target="_blank">Kementrian Agama</a> dengan jumlah umat muslim sebanyak 243,78 juta jiwa tahun 2024, Sumber peta: <a href="https://code.highcharts.com/mapdata/countries/id/id-all.topo.json" style="decoration: none;" target="_blank">Indonesia</a>'
+            text: 'Data dari <a target="_blank" href="https://satudata.kemenag.go.id">Kementerian Agama</a>'
         },
 
         mapNavigation: {
@@ -120,15 +116,16 @@ document.getElementById("year").textContent = new Date().getFullYear();
             dataLabels: {
                 enabled: true,
                 formatter: function () {
-                    // Format angka dengan pemisah ribuan menggunakan Highcharts.numberFormat
-                    return this.point.name + ': ' + Highcharts.numberFormat(this.point.value, 0, ',', '.');
+                    return this.point.name
+                        ? `${this.point.name}: ${Highcharts.numberFormat(this.point.value, 0, ',', '.')}`
+                        : null; // Tidak tampilkan jika nama undefined
                 }
             }
         }]
-
     });
 
 })();
+
 
 
 var Jamaah = {
@@ -255,41 +252,13 @@ var forecast = {
 var forcastJamaah = new ApexCharts(document.querySelector("#forcast"), forecast);
 forcastJamaah.render();
 
-const provinsi_population = [5438906, 
-    10334224,
-    5610761, 
-    5973722, 
-    3574753, 
-    8642068, 
-    2050109, 
-    8700424,
-    1375701, 
-    1708333, 
-    9507379, 
-    48581396,
-    37116014,
-    3460903, 
-    40512073,
-    11823585,
-    441454,  
-    5445137, 
-    529807,  
-    3359978, 
-    2047295, 
-    4108232, 
-    3502646, 
-    548332,  
-    847968,  
-    2496568, 
-    8474724, 
-    2638449, 
-    1213059, 
-    1217968, 
-    1007051, 
-    1020356, 
-    317805,  
-    162796]
-    ;
+const provinsi_population = [
+    5438906, 10334224, 5610761, 5973722, 3574753, 8642068, 2050109, 8700424,
+    1375701, 1708333, 9507379, 48581396, 37116014, 3460903, 40512073, 11823585,
+    441454, 5445137, 529807, 3359978, 2047295, 4108232, 3502646, 548332,
+    847968, 2496568, 8474724, 2638449, 1213059, 1217968, 1007051, 1020356,
+    533344, 567038
+];
 
 let total_population = 0;
 for (let i = 0; i < provinsi_population.length; i++) {
