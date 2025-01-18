@@ -99,6 +99,11 @@ section {
   height: 35px;
 }
 
+.seru {
+  display: inline-block;
+  animation: shake 2s infinite;
+}
+
 /* Keyframes untuk animasi getar */
 @keyframes shake {
   0%,
@@ -729,4 +734,15 @@ section {
   .timeline ul li:nth-child(odd) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
+}
+
+.zoom {
+  width: clamp(100px, 20vw, 250px);
+  margin-left: -10px;
+}
+
+
+.carousel-item a img {
+  border-radius: 15px;
+  height: 300px;
 }
