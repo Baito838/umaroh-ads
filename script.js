@@ -86,7 +86,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
         },
 
         subtitle: {
-            text: 'Data ini diambil dari <a target="_blank" style="decoration: none;" href="https://satudata.kemenag.go.id/dataset/detail/jumlah-penduduk-menurut-agama" target="_blank">Kementrian Agama</a> dengan jumlah umat muslim sebanyak 229,62 juta jiwa, Sumber peta: <a href="https://code.highcharts.com/mapdata/countries/id/id-all.topo.json" style="decoration: none;" target="_blank">Indonesia</a>'
+            text: 'Data ini diambil dari <a target="_blank" style="decoration: none;" href="https://satudata.kemenag.go.id/dataset/detail/jumlah-penduduk-menurut-agama" target="_blank">Kementrian Agama</a> dengan jumlah umat muslim sebanyak 243,78 juta jiwa tahun 2024, Sumber peta: <a href="https://code.highcharts.com/mapdata/countries/id/id-all.topo.json" style="decoration: none;" target="_blank">Indonesia</a>'
         },
 
         mapNavigation: {
@@ -255,12 +255,41 @@ var forecast = {
 var forcastJamaah = new ApexCharts(document.querySelector("#forcast"), forecast);
 forcastJamaah.render();
 
-const provinsi_population = [
-    50760474, 27401332, 28579160, 16895208, 41776237, 9997789, 43218225, 6582031,
-    8132608, 46500811, 233767230, 181139337, 17096299, 200743777, 56250565, 2163278,
-    26716522, 2598797, 16503056, 9888538, 20067681, 17015344, 2571036, 4210018,
-    12094970, 41579557, 12827396, 5910252, 6143812, 4966783, 4976229, 2413582, 1842179
-];
+const provinsi_population = [5438906, 
+    10334224,
+    5610761, 
+    5973722, 
+    3574753, 
+    8642068, 
+    2050109, 
+    8700424,
+    1375701, 
+    1708333, 
+    9507379, 
+    48581396,
+    37116014,
+    3460903, 
+    40512073,
+    11823585,
+    441454,  
+    5445137, 
+    529807,  
+    3359978, 
+    2047295, 
+    4108232, 
+    3502646, 
+    548332,  
+    847968,  
+    2496568, 
+    8474724, 
+    2638449, 
+    1213059, 
+    1217968, 
+    1007051, 
+    1020356, 
+    317805,  
+    162796]
+    ;
 
 let total_population = 0;
 for (let i = 0; i < provinsi_population.length; i++) {
