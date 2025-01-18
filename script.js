@@ -9,7 +9,7 @@ function toggleChat() {
     }
 }
 
-const text = "Kamu bisa dapatkan keuntungan hingga 10 juta hanya dengan modal 5 rupiah saja."; // Teks yang akan diketik
+const text = "Kamu bisa dapatkan keuntungan hingga 10 juta hanya dengan modal 5 juta rupiah saja."; // Teks yang akan diketik
 const speed = 10; // Kecepatan mengetik dalam milidetik
 typeWriter("hero-description", text, speed);
 
