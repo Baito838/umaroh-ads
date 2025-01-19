@@ -128,85 +128,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 
 
-var Jamaah = {
-    chart: {
-        type: 'bar',
-        height: 500,
-        stacked: true,
-        zoom: {
-            enabled: true,
-            type: 'x',  // Membolehkan zoom secara horizontal
-            resetIcon: {
-                shape: 'circle',
-                size: 20,
-                fillColor: '#fff',
-                strokeColor: '#37474f',
-                strokeWidth: 2
-            },
-        },
-    },
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            columnWidth: '50%',  // Mengatur lebar kolom bar
-            endingShape: 'rounded'
-        }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        show: true,
-        width: 2
-    },
-    xaxis: {
-        categories: [
-            'Aceh', 'Sumatera Utara', 'Sumatera Barat', 'Riau', 'Jambi', 'Sumatera Selatan',
-            'Bengkulu', 'Lampung', 'Kepulauan Bangka Belitung', 'Kepulauan Riau', 'DKI Jakarta',
-            'Jawa Barat', 'Jawa Tengah', 'Daerah Istimewa Yogyakarta', 'Jawa Timur', 'Banten', 'Bali',
-            'Nusa Tenggara Barat', 'Nusa Tenggara Timur', 'Kalimantan Barat', 'Kalimantan Tengah',
-            'Kalimantan Selatan', 'Kalimantan Timur', 'Kalimantan Utara', 'Sulawesi Utara', 'Sulawesi Tengah',
-            'Sulawesi Selatan', 'Sulawesi Tenggara', 'Gorontalo', 'Sulawesi Barat', 'Maluku', 'Maluku Utara',
-            'Papua Barat', 'Papua Selatan', 'Papua', 'Papua Pegunungan', 'Papua Tengah'
-        ],
-        labels: {
-            rotate: 0,  // Tidak ada rotasi pada label
-            style: {
-                fontSize: '12px',
-                colors: ['#000']
-            }
-        },
-        tickPlacement: 'on',
-        min: 0,  // Mulai dari index pertama
-        max: 4,  // Menampilkan 5 kategori pertama
-    },
-    yaxis: {
-        title: {
-            text: 'Jumlah'
-        }
-    },
-    fill: {
-        opacity: 1
-    },
-    series: [
-        {
-            name: '2022',
-            data: [
-                1999, 3802, 2106, 2304, 1328, 3201, 747, 3219, 486, 589, 3619, 17679, 13868, 1437, 16048, 4319, 319, 2054, 305, 1150, 736, 1743, 1181, 190, 326, 910, 332, 922, 447, 663, 496, 491, 491, 330, 7226
-            ]
-        },
-        {
-            name: '2023',
-            data: [
-                4378, 8328, 4613, 5047, 2909, 7012, 1636, 7050, 1065, 1291, 7926, 38723, 30377, 3147, 35152, 9461, 698, 4499, 668, 2519, 1612, 3818, 2586, 416, 713, 1993, 7272, 2019, 978, 1453, 1086, 1076, 1076, 723, 0, 0, 0, 0
-            ]
-        }
-    ]
-};
-
-var dataJamaah = new ApexCharts(document.querySelector("#dataJamaah"), Jamaah);
-dataJamaah.render();
-
 var forecast = {
     chart: {
         type: 'bar',  // Mengubah tipe chart menjadi bar
@@ -239,18 +160,28 @@ var forecast = {
     },
     series: [
         {
+            name: 'Jumlah Jamaah Haji',
+            data: [
+                92825 - 157,    // 2022: Kuota dikurangi sisa
+                210680 - 898,   // 2023: Kuota dikurangi sisa
+                213320 - 45     // 2024: Kuota dikurangi sisa
+            ]
+        },
+        {
             name: 'Jumlah Jamaah Umroh',
             data: [
                 957016,      // 2022
                 1368616,     // 2023
                 1833164,     // 2024 (data terbaru)
             ]
-        }
+        },
+       
     ]
 };
 
 var forcastJamaah = new ApexCharts(document.querySelector("#forcast"), forecast);
 forcastJamaah.render();
+
 
 const provinsi_population = [
     5438906, 10334224, 5610761, 5973722, 3574753, 8642068, 2050109, 8700424,
@@ -278,15 +209,21 @@ lightbox.option({
 });
 
 
-var pertumbuhanUmrah = {
+var pertumbuhanUmrahHaji = {
     chart: {
         type: 'line',
         height: 350
     },
-    series: [{
-        name: 'Jamaah Umrah',
-        data: [957016, 1368616, 1833164, 2537501, 3514825, 4864151, 6731582, 9319703, 12896381]
-    }],
+    series: [
+        {
+            name: 'Jamaah Umrah',
+            data: [957016, 1368616, 1833164, 2537501, 3514825, 4864151, 6731582, 9319703, 12896381]
+        },
+        {
+            name: 'Jamaah Haji',
+            data: [92668, 209782, 213275, 217000, 220500, 224000, 227500, 231000, 234500] // Perkiraan pertumbuhan jamaah haji
+        }
+    ],
     xaxis: {
         categories: ['2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030']
     },
@@ -298,13 +235,14 @@ var pertumbuhanUmrah = {
         }
     },
     title: {
-        text: 'Perkiraan Perkembangan Jamaah Umrah',
+        text: '',
         align: 'center'
     }
 };
 
-var chartpertumbuhanUmrah = new ApexCharts(document.querySelector("#pertumbuhanUmrah"), pertumbuhanUmrah);
-chartpertumbuhanUmrah.render();
+var pertumbuhanUmrah = new ApexCharts(document.querySelector("#pertumbuhanUmrah"), pertumbuhanUmrahHaji);
+pertumbuhanUmrah.render();
+
 
 
 
