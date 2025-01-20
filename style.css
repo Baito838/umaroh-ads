@@ -369,7 +369,7 @@ section {
 /* -------------------------------------------------------------------------------------- */
 
 #middle {
-  background-color: var(--pastel); /* Warna latar */
+  background-color: var(--alice); /* Warna latar */
   /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
@@ -456,7 +456,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--alice);
+  background-color: var(--pastel);
   opacity: 0.8; /* Transparansi latar belakang */
   z-index: 1; /* Letakkan di bawah elemen anak */
 }
