@@ -55,9 +55,10 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: min-content;
   background-color: white;
 }
+
 
 #containerMap {
   width: 100%;
@@ -229,7 +230,7 @@ section {
   background-repeat: no-repeat; /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
-  min-height: 100vh; /* Tinggi penuh viewport */
+  min-height: min-content; /* Tinggi penuh viewport */
   overflow: hidden; /* Mencegah konten anak keluar */
 }
 
@@ -310,7 +311,7 @@ section {
   background-repeat: no-repeat; /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
-  min-height: 100vh; /* Tinggi penuh viewport */
+  min-height: min-content; /* Tinggi penuh viewport */
   overflow: hidden; /* Mencegah konten anak keluar */
 }
 
@@ -343,7 +344,7 @@ section {
   background-repeat: no-repeat; /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
-  min-height: 100vh; /* Tinggi penuh viewport */
+  min-height: min-content; /* Tinggi penuh viewport */
   overflow: hidden; /* Mencegah konten anak keluar */
 }
 
@@ -373,7 +374,7 @@ section {
   /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
-  min-height: 100vh; /* Tinggi penuh viewport */
+  min-height: min-content; /* Tinggi penuh viewport */
   overflow: hidden; /* Mencegah konten anak keluar */
 }
 
@@ -445,7 +446,7 @@ section {
   background-repeat: no-repeat; /* Jangan ulang gambar */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   width: 100%; /* Lebar penuh */
-  min-height: 100vh; /* Tinggi penuh viewport */
+  min-height: min-content; /* Tinggi penuh viewport */
   overflow: hidden; /* Mencegah konten anak keluar */
 }
 
