@@ -555,7 +555,7 @@ section {
 
 /* Gaya tambahan untuk carousel */
 .carousel-item img {
-  object-fit: cover; /* Pastikan gambar menyesuaikan ukuran dengan carousel */
+  object-fit: contain; /* Pastikan gambar menyesuaikan ukuran dengan carousel */
 }
 
 /* Style modal Lightbox (opsional) */
