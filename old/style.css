@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --pastel: #fefcc1;
+  --cyan: #e0ffff;
+  --alice: #f0f8ff;
+  --yellow: #ffba00;
+  --black: #282828;
+}
+
+/* width */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #ffba00;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #ffba00;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+}
+
+* {
+  font-family: "Poppins", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--black);
+}
+
+section {
+  min-height: min-content;
+  background-color: white;
+}
+
+
+#containerMap {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.chart {
+  width: 100%;
+  max-width: 600px;
+}
+
+.text-y {
+  color: var(--yellow);
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
+/* Bubble WhatsApp utama */
+.whatsapp-bubble {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  padding: 10px 20px;
+  border-radius: 30px; /* Membuat bentuk rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  animation: shake 2s infinite;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-bubble:hover {
+  background-color: #22b859; /* Warna hijau lebih gelap saat hover */
+}
+
+.whatsapp-bubble img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px; /* Jarak antara ikon dan teks */
+}
+
+.whatsapp-bubble .whatsapp-text {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.seru {
+  display: inline-block;
+  animation: shake 2s infinite;
+}
+
+/* Keyframes untuk animasi getar */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-2px, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(2px, 0);
+  }
+}
+
+/* Bubble chat */
+.whatsapp-chat {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 220px;
+}
+
+/* Segitiga kecil di bawah bubble chat */
+.whatsapp-chat::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ffffff;
+}
+
+.whatsapp-chat a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.whatsapp-chat a:hover {
+  text-decoration: none;
+}
+
+.whatsapp-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+.head-bar {
+  background-color: transparent;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.head-logo {
+  background-color: white;
+  padding: 10px 30px;
+  /* margin: auto; */
+  width: min-content;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 15px 0;
+  position: fixed;
+  /* left: 50%; Menempatkan di tengah horizontal */
+  /* transform: translateX(-50%); Menyesuaikan posisi agar tepat di tengah */
+  z-index: 9;
+  border-right: 2px var(--yellow) solid;
+  border-bottom: 2px var(--yellow) solid;
+  /* border-left: 2px var(--yellow) solid; */
+  border-top: none; /* Bagian atas tanpa border */
+}
+
+.head-logo img {
+  max-width: clamp(90px, 15vw, 130px);
+}
+
+#hero {
+  position: relative;
+  background-color: #282828; /* Warna latar */
+  background-image: url("/assets/hero-bg.jpg"); /* Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: min-content; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282828;
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#hero > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+.hero-img {
+  max-width: clamp(300px, 25vw, 800px);
+  z-index: 2;
+  margin-top: 50px;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.hero-img:hover {
+  animation: rotateAnimation 1s ease-in-out 1;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.platform-title {
+  font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran antara 1rem hingga 2.5rem */
+}
+
+.umrah-title {
+  font-size: clamp(2rem, 4vw, 5rem); /* Ukuran antara 2rem hingga 5rem */
+  font-weight: bold;
+}
+
+.indonesia-title {
+  font-size: clamp(1.5rem, 3vw, 4rem); /* Ukuran antara 1.5rem hingga 4rem */
+}
+
+#hero-description {
+  text-align: justify;
+  display: inline-block; /* Untuk mempertahankan inline layout */
+  min-height: 60px; /* Sesuaikan dengan kebutuhan */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+#statistic {
+  position: relative;
+  background-color: var(--alice); /* Warna latar */
+  /* background-image: url('/assets/statistic-bg.jpg'); Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: min-content; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#statistic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--alice);
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#statistic > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+#problem {
+  position: relative;
+  background-color: var(--pastel); /* Warna latar */
+  /* background-image: url('/assets/problem-bg.jpg'); Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: min-content; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#problem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pastel);
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#problem > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+#middle {
+  background-color: var(--alice); /* Warna latar */
+  /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: min-content; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+.problem-list {
+  list-style-type: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+
+.problem-list li {
+  position: relative;
+  padding-left: 25px; /* Memberi ruang untuk tanda silang */
+  margin-bottom: 10px;
+}
+
+.problem-list li::before {
+  content: "✖"; /* Tanda silang */
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.solution-list {
+  list-style-type: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+
+.solution-list li {
+  position: relative;
+  padding-left: 30px; /* Ruang untuk ikon */
+  margin-bottom: 10px;
+}
+
+.solution-list li::before {
+  content: "✨"; /* Ikon centang bersinar */
+  color: #ffa500; /* Warna emas/oranye */
+  font-size: 1.2rem; /* Ukuran ikon */
+  position: absolute;
+  left: 0;
+}
+
+.why-img {
+  width: clamp(150px, 15vw, 200px);
+  transition: transform 0.8s ease;
+}
+
+.card {
+  animation: 0.8s;
+}
+
+.card:hover .why-img {
+  transform: scale(1.2); /* Zoom-in */
+}
+
+.goals-img {
+  width: clamp(80px, 35vw, 150px);
+  transition: transform 0.8s ease;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+#last {
+  position: relative;
+  background-color: var(--alice); /* Warna latar */
+  /* background-image: url('/assets/last-bg.jpg'); Gambar latar */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Jangan ulang gambar */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  width: 100%; /* Lebar penuh */
+  min-height: min-content; /* Tinggi penuh viewport */
+  overflow: hidden; /* Mencegah konten anak keluar */
+}
+
+#last::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pastel);
+  opacity: 0.8; /* Transparansi latar belakang */
+  z-index: 1; /* Letakkan di bawah elemen anak */
+}
+
+#last > * {
+  position: relative;
+  z-index: 2; /* Letakkan elemen anak di atas */
+}
+
+.des-img {
+  width: clamp(80px, 25vw, 200px);
+  transition: transform 0.8s ease;
+}
+
+.hope-list {
+  list-style-type: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+
+.hope-list li {
+  position: relative;
+  padding-left: 30px; /* Ruang untuk ikon */
+  margin-bottom: 10px;
+}
+
+.hope-list li::before {
+  content: "🎯"; /* Ikon centang bersinar */
+  color: #ffa500; /* Warna emas/oranye */
+  font-size: 1.2rem; /* Ukuran ikon */
+  position: absolute;
+  left: 0;
+}
+
+.headline {
+  font-size: clamp(
+    1.5rem,
+    5vw,
+    3rem
+  ); /* Ukuran fleksibel dari kecil ke besar */
+  font-weight: bold; /* Membuat teks tebal */
+  text-align: center; /* Teks berada di tengah */
+  margin: 20px 0; /* Jarak atas dan bawah */
+  color: #333; /* Warna teks (ubah sesuai kebutuhan) */
+  line-height: 1.5; /* Spasi antar baris */
+}
+
+.headline-2 {
+  font-size: clamp(
+    0.8rem,
+    5vw,
+    1.5rem
+  ); /* Ukuran fleksibel dari kecil ke besar */
+  font-weight: bold; /* Membuat teks tebal */
+  text-align: center; /* Teks berada di tengah */
+  margin: 20px 0; /* Jarak atas dan bawah */
+  color: #333; /* Warna teks (ubah sesuai kebutuhan) */
+  line-height: 1.5; /* Spasi antar baris */
+}
+
+.rotating-icon {
+  display: inline-block;
+  font-size: 2rem; /* Ukuran ikon */
+  animation: rotate-loop 1s infinite ease-in-out;
+}
+
+@keyframes rotate-loop {
+  0% {
+    transform: rotate(0deg); /* Posisi awal */
+  }
+  20% {
+    transform: rotate(15deg); /* Putar kanan */
+  }
+  40% {
+    transform: rotate(0deg); /* Kembali ke posisi awal */
+  }
+  60% {
+    transform: rotate(-15deg); /* Putar kiri */
+  }
+  80% {
+    transform: rotate(0deg); /* Kembali ke posisi awal */
+  }
+  100% {
+    transform: rotate(0deg); /* Diam (jeda) */
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: #282828; /* Latar belakang abu-abu gelap */
+  color: #ffffff; /* Teks putih */
+  text-align: center; /* Teks di tengah */
+  padding: 20px 0; /* Jarak atas dan bawah */
+  font-size: 14px; /* Ukuran teks */
+  font-family: Arial, sans-serif; /* Font yang sederhana */
+}
+
+/* Gaya tambahan untuk carousel */
+.carousel-item img {
+  object-fit: contain; /* Pastikan gambar menyesuaikan ukuran dengan carousel */
+}
+
+/* Style modal Lightbox (opsional) */
+.lightboxOverlay {
+  background-color: rgba(0, 0, 0, 0.8); /* Gelap sedikit untuk latar belakang */
+}
+
+.zoom-image {
+  position: absolute;
+  animation: zoomInOut 1.5s infinite ease-in-out;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.8); /* Ukuran normal */
+  }
+  50% {
+    transform: scale(1.2); /* Zoom in */
+  }
+  100% {
+    transform: scale(0.8); /* Kembali ke ukuran normal */
+  }
+}
+
+.owner {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.position-relative {
+  position: relative;
+  border-radius: 20px;
+}
+
+.text-owner {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2b2b2b;
+  white-space: nowrap;
+}
+
+.bg-owner {
+  background-color: #ffba00;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.timeline ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+}
+
+/* line */
+.timeline ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+.timeline ul li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+.timeline ul li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+.timeline ul li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+.timeline ul li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* circle */
+.timeline ul li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title descr */
+.timeline ul li .title,
+.timeline ul li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+.timeline ul li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+.timeline ul li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+
+/* shadows */
+.timeline ul li .title::before,
+.timeline ul li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+.timeline ul li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+.timeline ul li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  .timeline ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  .timeline ul::before {
+    grid-column: 2;
+  }
+  .timeline ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  .timeline ul li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  .timeline ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  .timeline ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  .timeline ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .timeline ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+
+.zoom {
+  width: clamp(100px, 20vw, 250px);
+  margin-left: -10px;
+}
+
+.carousel-item a img {
+  border-radius: 0.375rem;
+  width: clamp(250, 25vw, 100%);
+  height: 300px;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}

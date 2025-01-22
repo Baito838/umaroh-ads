@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umaroh</title>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
@@ -13,7 +13,6 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-    <!-- Include jQuery (if required by your version of Lightbox) -->
     <!-- Link ke Bootstrap CSS untuk Carousel -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -30,206 +29,148 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <title>Umaroh</title>
-
+    <!-- My Style -->
     <link
       rel="shortcut icon"
-      href="/assets/logo/Logo-Bulet.png"
+      href="/assets/Logo-Bulet.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div class="head-bar">
-      <a href="https://umaroh.com" target="_blank">
-        <span class="head-logo">
-          <img src="/assets/logo/Untitled.png" alt="" />
-        </span>
-      </a>
-    </div>
+    <section
+      id="hook"
+      class="px-3 px-lg-5 d-flex justify-content-center align-items-center"
+    >
+      <div class="text-center">
+        <div class="py-3">
+          <img class="hook-logo" src="/assets/LOGO NEW.png" alt="" />
+        </div>
 
-    <section id="hero">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-6 py-2 py-lg-5 order-2 order-md-1">
-            <img
-              class="hero-img mx-auto d-block"
-              data-aos="zoom-in-up"
-              data-aos-duration="3000"
-              src="/assets/mockup/2.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="col-md-6 pt-5 pt-lg-5 pb-lg-5 pb-1 px-4 px-lg-2 hero-text d-flex align-items-center flex-wrap order-1 order-md-2"
+        <div class="headline text-center">
+          <h4
+            class="moderniz headline-4"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
           >
-            <div>
-              <h6
-                data-aos="fade-down"
-                data-aos-duration="1200"
-                class="text-light platform-title"
-              >
-                SELAMAT DATANG DI
-              </h6>
-              <h2
-                data-aos="fade-left"
-                data-aos-duration="1400"
-                class="text-y umrah-title"
-              >
-                PLATFORM DIGITAL UMROH
-              </h2>
-              <h3
-                data-aos="fade-right"
-                data-aos-duration="1300"
-                class="text-light indonesia-title"
-              >
-                DI INDONESIA
-              </h3>
-              <p
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                id="hero-description"
-                class="text-light"
-              ></p>
-              <p data-aos="fade-up" data-aos-duration="1500" class="text-light">
-                Ayo ikuti kelas webinar GRATIS , click link di bawah sekarang
-                kuota terbatas
-              </p>
-              <a
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                class="btn btn-sm btn-success"
-                href="https://chat.whatsapp.com/JmbK32J0HRkFv05RrM9agr"
-                >Join Group</a
-              >
-            </div>
+            KAMU BISA MENDAPATKAN KEUNTUNGAN HINGGA
+          </h4>
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              style="display: inline-block"
+              class="hook-uang"
+              src="/assets/UANG.png"
+              data-aos-duration="1600"
+              alt=""
+              data-aos="zoom-in"
+            />
+            <h2
+              style="margin-bottom: -20px; margin-left: 20px"
+              data-aos="fade-left"
+              data-aos-duration="1600"
+            >
+              hanya dengan
+            </h2>
+          </div>
+
+          <h2
+            class="moderniz mt-3 headline-2"
+            data-aos="zoom-in-up"
+            data-aos-duration="1700"
+          >
+            MODAL 5JT RUPIAH SAJA!
+          </h2>
+          <div>
+            <h2
+              style="display: inline-block"
+              data-aos="fade-right"
+              data-aos-duration="1800"
+            >
+              ayo ikuti kelas webinar&nbsp;
+            </h2>
+            <h2
+              style="display: inline-block"
+              data-aos="fade-right"
+              class="moderniz text-yellow"
+              data-aos-duration="1800"
+            >
+              GRATIS,
+            </h2>
+            <h2 data-aos-duration="1800" data-aos="fade-left" class="mt-3">
+              Klik link di bawah sekarang karena kuota terbatas
+            </h2>
+          </div>
+
+          <div>
+            <a
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              href="https://chat.whatsapp.com/JmbK32J0HRkFv05RrM9agr"
+              class="btn btn-success rounded-pill px-3"
+              ><h1>Daftar Sekarang</h1></a
+            >
           </div>
         </div>
       </div>
     </section>
+    <section id="welcome" class="px-3 px-lg-5 pt-5">
+      <div class="text-center">
+        <h2
+          class="moderniz headline-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1700"
+        >
+          SELAMAT DATANG
+        </h2>
+        <h2
+          class="moderniz headline-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1700"
+        >
+          DI PLATFROM DIGITAL UMAROH INDONESIA
+        </h2>
 
-    <section id="statistic" class="py-5 px-lg-5 px-3">
-      <div class="container">
-        <div class="row">
-          <h1
-            style="color: rgb(244, 50, 50)"
+        <div class="mt-5">
+          <img
+            class="welcome-img"
+            src="/assets/ASET 3.png"
+            alt=""
+            data-aos="fade-up"
+            data-aos-duration="1300"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="masalah">
+      <div class="masalah-card py-4">
+        <div class="text-center">
+          <h4
+            class="moderniz headline-4 text-red"
             data-aos="zoom-in-up"
-            data-aos-duration="1100"
-            class="text-center mb-3"
+            data-aos-duration="1700"
           >
-            Masalah Travel Umrah
-            <p class="seru">!!!</p>
-          </h1>
-          <h5
-            class="text-center"
+            PROBLEM MARKET JAMAAH
+          </h4>
+          <h4
+            class="moderniz headline-4 text-red"
             data-aos="zoom-in-up"
-            data-aos-duration="1100"
+            data-aos-duration="1700"
           >
-            Memulai bisnis di indonesia membutuhkan proses yang panjang
-          </h5>
-          <div class="row g-3 justify-content-center">
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/10.png"
-                alt="Image 10"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/11.png"
-                alt="Image 11"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/12.png"
-                alt="Image 12"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/13.png"
-                alt="Image 13"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/14.png"
-                alt="Image 14"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/15.png"
-                alt="Image 15"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/16.png"
-                alt="Image 16"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/17.png"
-                alt="Image 17"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/18.png"
-                alt="Image 18"
-                class="img-fluid rounded"
-              />
-            </div>
-            <div class="col-6 col-lg-2 col-md-4">
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="1300"
-                src="/assets/why/19.png"
-                alt="Image 19"
-                class="img-fluid rounded"
-              />
-            </div>
-          </div>
-          <h5
-            class="text-center mt-3"
+            UMRAH DAN HAJI DI TAHUN SEKIAN
+          </h4>
+          <h4
+            class="moderniz headline-4 text-red"
             data-aos="zoom-in-up"
-            data-aos-duration="1100"
+            data-aos-duration="1700"
           >
-            Masalah yang terjadi
-          </h5>
-
+            MASIH BANYAK
+          </h4>
+        </div>
+        <div class="row px-lg-5 px-3">
           <div class="col-md-6 py-5 px-lg-5 px-md-4 px-2">
             <div class="card p-3" data-aos="fade-up" data-aos-duration="1000">
               <ul class="problem-list">
@@ -274,7 +215,7 @@
                         src="assets/problem/1 (4).png"
                         class="d-block w-100"
                         alt="Photo 1"
-                        id="image1"
+                        id="image"
                       />
                     </a>
                   </div>
@@ -319,7 +260,7 @@
                         src="assets/problem/1 (3).png"
                         class="d-block w-100"
                         alt="Photo 2"
-                        id="image2"
+                        id="image3"
                       />
                     </a>
                   </div>
@@ -355,608 +296,222 @@
         </div>
       </div>
     </section>
-
-    <section id="problem" class="py-5 px-lg-5 px-3">
-      <h3 class="text-center">Peluang Jamaah Haji &amp; Umrah</h3>
-      <div id="containerMap"></div>
-      <div class="row">
-        <div
-          class="col-md-6 px-1 px-lg-3"
+    <section id="masalah-2" class="py-5 px-lg-5 px-3">
+      <div class="text-center mt-5">
+        <h4
+          class="moderniz headline-4"
           data-aos="zoom-in-up"
-          data-aos-duration="3000"
+          data-aos-duration="1700"
         >
-          <div class="card p-3">
-            <h5 class="text-center mb-3">Data Haji &amp; Umrah</h5>
-            <p class="text-center">
-              Data jamaah umrah 2022 (957.016), 2023 (1.368.616) &amp; 2024
-              (1.833.164) kenaikan mencapai 43,0% dan 33,9%. Jumlah jamaah haji
-              2022 (92.668), 2023 (209.782), dan 2024 (213.275), dengan sisa
-              kuota hanya 0,17%, 0,43%, dan 0,02%.Data Diambil dari
-              <a
-                target="_blank"
-                href="https://satudata.kemenag.go.id/dataset/detail/perkembangan-kuota-jemaah-haji-menurut-provinsi"
-                >Data Umrah KEMENAG</a
-              >
-              &amp;
-              <a
-                target="_blank"
-                href="https://kemenag.go.id/internasional/kemenag-haji-2024-terbanyak-dalam-kuota-dan-tertinggi-serapannya-j7Mki"
-                >Laporan Haji KEMENAG</a
-              >. <br />Ketuk bar untuk melihat data.
-            </p>
-            <div id="forcast"></div>
-          </div>
+          PROBLEM ORANG BIKIN
+        </h4>
+        <h4
+          class="moderniz headline-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1700"
+        >
+          TRAVEL UMRAH SUSAH, BIKIN PPIU GA MUDAH DAN LAMA
+        </h4>
+        <h4
+          class="moderniz headline-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1700"
+        ></h4>
+        <h4
+          class="moderniz headline-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1700"
+        >
+          PERSAINGAN DIGITAL MARKETING SOSIAL ITU SUSAH
+        </h4>
+        <h4
+          class="moderniz headline-4"
+          data-aos="zoom-in-up"
+          data-aos-duration="1700"
+        ></h4>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/10.png"
+            alt="Image 10"
+            class="img-fluid rounded"
+          />
         </div>
-        <div class="col-md-6 px-1 px-lg-3">
-          <div class="card p-3" data-aos="zoom-in-up" data-aos-duration="3000">
-            <h5 class="text-center mb-3">Peluang Jamaah Haji &amp; Umrah</h5>
-            <p class="text-center">
-              Jumlah jamaah umrah menunjukkan pertumbuhan signifikan dari tahun
-              2022 hingga 2030, dengan angka pada 2022 mencapai 957.016 jamaah,
-              naik 43% menjadi 1.368.616 jamaah pada 2023, dan diproyeksikan
-              mencapai 12.896.381 jamaah pada 2030. Sebaliknya, jumlah jamaah
-              haji lebih stabil karena bergantung pada kuota pemerintah, dengan
-              92.668 jamaah pada 2022 (sisa kuota 157), meningkat menjadi
-              209.782 jamaah pada 2023, dan diperkirakan mencapai 234.500 jamaah
-              pada 2030.
-            </p>
-            <div id="pertumbuhanUmrah"></div>
-          </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/11.png"
+            alt="Image 11"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/12.png"
+            alt="Image 12"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/13.png"
+            alt="Image 13"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/14.png"
+            alt="Image 14"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/15.png"
+            alt="Image 15"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/16.png"
+            alt="Image 16"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/17.png"
+            alt="Image 17"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/18.png"
+            alt="Image 18"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-6 col-lg-2 col-md-4">
+          <img
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
+            src="/assets/why/19.png"
+            alt="Image 19"
+            class="img-fluid rounded"
+          />
         </div>
       </div>
     </section>
-
-    <section id="middle" class="py-5">
-      <div class="container">
-        <div class="px-lg-5 px-md-4 px-2">
-          <h1
-            class="text-center mb-5"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Umaroh Hadir Sebagai Solusi
-
-            <span class="zoom-image"> 🌟 </span>
-          </h1>
-
-          <h4 data-aos="fade-up" data-aos-duration="1000">Apa itu Umaroh ?</h4>
-          <p data-aos="fade-up" data-aos-duration="1000">
-            Umaroh.com, di bawah naungan PT Nawaitul Umrah Haji, merupakan
-            startup teknologi pertama di Indonesia yang menghadirkan platform
-            digital terintegrasi untuk layanan end-to-end ibadah umroh dan haji.
-            Visi kami adalah menjadi platform umroh dan haji digital nomor satu
-            di Asia Tenggara—menjadikan perjalanan ibadah lebih mudah, aman, dan
-            transparan melalui solusi teknologi yang inovatif dan berorientasi
-            pada kepuasan pengguna.
-          </p>
-        </div>
-        <div class="row">
-          <div
-            class="col-md-12 py-5 px-lg-5 px-4"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div>
-              <div class="card p-3" data-aos="fade-up" data-aos-duration="1000">
-                <ul class="solution-list">
-                  <li data-aos="zoom-in-right" data-aos-duration="1200">
-                    Modal daftar jadi Mitra Umaroh mulai dari 5 Juta Rupiah dan
-                    bisa custom margin hingga 10 Juta Rupiah hanya dengan
-                    menggunakan 1 aplikasi aja.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="1300">
-                    Mitra dapat menggunakan nomor izin PPIU dari PT. Nawaitul
-                    Umrah Haji.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="1400">
-                    Mitra mendapat pelatihan edukasi dan pendampingan digital
-                    marketing di Webinar Online GRATIS setiap pekannya.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="1500">
-                    Mitra dapat mengetahui komponen harga secara detail.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <h3 class="text-center" data-aos="fade-up" data-aos-duration="1000">
-            Pendiri
-          </h3>
-          <p class="text-center" data-aos="fade-up" data-aos-duration="1000">
-            Pimpinan yang efektif memperhatikan setiap komponen pendukung dalam
-            perusahaan, menyadari pentingnya kolaborasi dan sinergi antar tim.
-            Dengan menciptakan lingkungan inklusif dan mendengarkan masukan,
-            semua elemen dapat bergerak bersama menuju tujuan bersama.
-          </p>
-
-          <div class="row">
-            <div
-              class="col-md-6 text-center mb-4 position-relative"
-              data-aos="zoom-in-right"
-              data-aos-duration="1100"
-            >
-              <img
-                class="owner"
-                src="/assets/owner/fto2.png"
-                alt="Pendiri 1"
-                data-bs-toggle="modal"
-                data-bs-target="#bioModal1"
-              />
-              <div
-                class="position-absolute bottom-0 start-50 translate-middle-x mb-3"
-              >
-                <h5 class="text-center">
-                  <span class="bg-owner text-owner"
-                    >YULENDRA PRASETYO, S.T.,MBA</span
-                  >
-                </h5>
-              </div>
-              <small class="text-center">ketuk foto untuk melihat bio</small>
-            </div>
-            <div
-              class="col-md-6 text-center mb-4 position-relative"
-              data-aos="zoom-in-left"
-              data-aos-duration="1400"
-            >
-              <img
-                class="owner"
-                src="/assets/owner/fto1.png"
-                alt="Pendiri 2"
-                data-bs-toggle="modal"
-                data-bs-target="#bioModal2"
-              />
-              <div
-                class="position-absolute bottom-0 start-50 translate-middle-x mb-3"
-              >
-                <h5 class="text-center">
-                  <span class="bg-owner text-owner"
-                    >H. AGUS SOFIANDI, S.Pi</span
-                  >
-                </h5>
-              </div>
-              <small class="text-center">ketuk foto untuk melihat bio</small>
-            </div>
-          </div>
-
-          <!-- Modal untuk Foto 1 -->
-          <div
-            class="modal fade"
-            id="bioModal1"
-            tabindex="-1"
-            aria-labelledby="bioModalLabel1"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="bioModalLabel1">
-                    YULENDRA PRASETYO, S.T.,MBA
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <!-- Isi Bio Pendiri 1 -->
-                  <p>
-                    Seorang profesional berpengalaman dengan lebih dari 20 tahun
-                    dalam bidang Strategic Management, Business Strategy, dan
-                    Continuous Improvement berperan penting sebagai Head of
-                    Strategy di Astra Mining Group, bertanggung jawab atas
-                    pengembangan dan implementasi strategi-strategi utama
-                    perusahaan. Pengalaman pada perusahaan besar seperti Gajah
-                    Tunggal Group memimpin lebih dari 1.600 karyawan sebagai
-                    seorang Eksekutif yang berfokus pada peningkatan kinerja dan
-                    efisiensi operasional. Selain kiprah korporasi, Pak Yulendra
-                    juga berkontribusi sebagai dosen di Program MBA Sekolah
-                    Bisnis dan Manajemen Institut Teknologi Bandung (SBM ITB)
-                    Pengalaman mendalam di berbagai sektor, termasuk industri
-                    pertambangan, otomotif, properti, dan ritel, yang memperkaya
-                    perspektifnya dalam membangun strategi yang adaptif dan
-                    berdaya saing tinggi
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Tutup
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal untuk Foto 2 -->
-          <div
-            class="modal fade"
-            id="bioModal2"
-            tabindex="-1"
-            aria-labelledby="bioModalLabel2"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="bioModalLabel2">
-                    H. AGUS SOFIANDI, S.Pi
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <!-- Isi Bio Pendiri 2 -->
-                  <p>
-                    Seorang kelahiran Surabaya lulusan Institut Pertanian Bogor,
-                    memulai karir dengan berbisnis, banyak usaha yang lahir dan
-                    mencapai kesuksesan, koneksi dan jaringan yang luas menjadi
-                    dasar lahirnya bisnis-bisnis yang dijalani, dari berbagai
-                    industri mulai dari industri perikanan, industri pertanian,
-                    industri teknologi dan lainnya.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Tutup
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h3 class="text-center">Sejarah</h3>
-        <div class="timeline">
-          <ul>
-            <li style="--accent-color: #ffba00">
-              <div
-                data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                class="date"
-              >
-                2018
-              </div>
-              <div
-                data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                class="title"
-              >
-                Awal Perjalanan
-              </div>
-              <div
-                data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                class="descr"
-              >
-                PT Nawaitul Umrah Haji berdiri sebagai BPW pada Juli 2018.
-              </div>
-            </li>
-            <li style="--accent-color: #ffba00">
-              <div
-                data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                class="date"
-              >
-                2022
-              </div>
-              <div
-                data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                class="title"
-              >
-                Pengajuan Izin
-              </div>
-              <div
-                data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                class="descr"
-              >
-                PT Nawaitul Umrah Haji mengajukan izin PPIU ke Kementerian Agama
-                pada September 2022.
-              </div>
-            </li>
-            <li style="--accent-color: #ffba00">
-              <div
-                data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                class="date"
-              >
-                2023
-              </div>
-              <div
-                data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                class="title"
-              >
-                Pembuatan Aplikasi
-              </div>
-              <div
-                data-aos="zoom-in-right"
-                data-aos-duration="1000"
-                class="descr"
-              >
-                Mendapat izin PPIU pada Agustus 2023, nomor izin PPIU :
-                28092200496140003. Desember 2023 memberangkatkan jamaah melalui
-                platform UMAROH 1.0.
-              </div>
-            </li>
-            <li style="--accent-color: #ffba00">
-              <div
-                data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                class="date"
-              >
-                2024
-              </div>
-              <div
-                data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                class="title"
-              >
-                Aplikasi V2.0
-              </div>
-              <div
-                data-aos="zoom-in-left"
-                data-aos-duration="1000"
-                class="descr"
-              >
-                Restrukturisasi dilakukan Maret 2024. UMAROH 2.0 diluncurkan
-                pada September 2024.
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="last" class="py-5 px-md-4 px-2">
-      <div class="container">
-        <h3
-          class="text-center mb-5"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          Kenapa Memilih Umaroh ?
-        </h3>
-
-        <div class="col-12">
-          <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-1">
-              <div
-                class="card w-100 p-3"
-                data-aos="fade-up"
-                data-aos-duration="400"
-              >
-                <h4 class="text-center">Inovatif</h4>
-                <img
-                  class="why-img mx-auto d-block"
-                  src="/assets/why/1.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Miliki dan kembangkan bisnis usaha travel Umrah dan Haji anda
-                  hanya dalam satu aplikasi, mulai dengan modal hanya 5 juta
-                  rupiah!
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-1">
-              <div
-                class="card w-100 p-3"
-                data-aos="fade-up"
-                data-aos-duration="800"
-              >
-                <h4 class="text-center">Fleksible</h4>
-                <img
-                  class="why-img mx-auto d-block"
-                  src="/assets/why/2.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Anda bisa memiliki brand sendiri, membuat paket Umrah dan Haji
-                  sesuai keinginan, serta menentukan ujrah sendiri!
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-1">
-              <div
-                class="card w-100 p-3"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <h4 class="text-center">Transparan</h4>
-                <img
-                  class="why-img mx-auto d-block"
-                  src="/assets/why/3.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Semua komponen harga paket dan terlihat secara transaparan,
-                  mulai dari pendaftaran, pembayaran hingga keberangkatan!
-                </p>
-              </div>
-            </div>
-          </div>
-          <h3 class="text-center my-3" data-aos="fade-up"
-          data-aos-duration="1000">Semua ada di satu genggaman</h3>
-          <div class="row mb-3">
-            <div
-              class="col-md-6 py-3 d-flex align-items-center justify-content-center"
-            >
-              <img
-                class="hero-img mx-auto d-block"
-                data-aos="zoom-in-up"
-                data-aos-duration="3000"
-                src="/assets/mockup/3.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="col-md-6 d-flex align-items-center justify-content-center"
-            >
-              <div
-                class="card p-3 d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-duration="1600"
-              >
-                <ul class="solution-list">
-                  <li data-aos="zoom-in-right" data-aos-duration="1600">
-                    Bisa membuat paket sendiri hanya dalam 2 menit.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="1700">
-                    Bisa customer menentukan paket sendiri sesuai keinginan.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="1800">
-                    Bisa menggunakan brand sendiri.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="1900">
-                    Bisa menentukan ujroh/margin sendiri.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="2000">
-                    Tracking system mulai dari pembayaran paket hingga
-                    keberangkatan jamaah.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="2100">
-                    Semua pengelolaan hanya dalam satu aplikasi.
-                  </li>
-                  <li data-aos="zoom-in-right" data-aos-duration="2100">
-                    Semua transaksi mulai dari pendaftaran, pembayaran dan
-                    keberangkatan tercatat dalam aplikasi secara transparan.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card p-3" data-aos="fade-up" data-aos-duration="1000">
-          <h3 class="text-center mb-5">Tujuan Kami</h3>
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-1">
-              <div class="p-3" data-aos="fade-up" data-aos-duration="400">
-                <img
-                  class="goals-img mx-auto d-block"
-                  src="/assets/why/5.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Mempermudah operasional bisnis travel umrah.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-1">
-              <div class="p-3" data-aos="fade-up" data-aos-duration="800">
-                <img
-                  class="goals-img mx-auto d-block"
-                  src="/assets/why/6.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Memberikan solusi praktis untuk kendala pemasaran,
-                  administrasi, dan regulasi.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-1">
-              <div class="p-3" data-aos="fade-up" data-aos-duration="1200">
-                <img
-                  class="goals-img mx-auto d-block"
-                  src="/assets/why/7.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Meningkatkan kepercayaan calon jamaah terhadap mitra kami.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-1">
-              <div class="p-3" data-aos="fade-up" data-aos-duration="1600">
-                <img
-                  class="goals-img mx-auto d-block"
-                  src="/assets/why/8.png"
-                  alt=""
-                />
-                <p class="text-center">
-                  Membantu mitra menjangkau lebih banyak jamaah secara efisien.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div
-          class="card mt-3 py-5 px-2 px-lg-5"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          <h3 class="text-center mb-5">Harapan kami untuk mitra</h3>
-          <ol class="hope-list">
-            <li>
-              <h4>Meningkatkan Kualitas Layanan</h4>
-              Dengan dukungan teknologi dan sistem Umaroh.com, kami ingin mitra
-              fokus memberikan pelayanan terbaik kepada jamaah.
-            </li>
-            <li>
-              <h4>Membangun Reputasi yang Kokoh</h4>
-              Melalui sistem review dan rating kami, kami ingin mitra kami
-              dikenal sebagai travel umrah yang amanah dan terpercaya.
-            </li>
-            <li>
-              <h4>Mengembangkan Bisnis Secara Berkelanjutan</h4>
-              Kami ingin melihat mitra berkembang, mulai dari menjangkau lebih
-              banyak jamaah hingga memperluas jaringan mereka di industri travel
-              umrah.
-            </li>
-            <li>
-              <h4>Menjadi Inspirasi bagi Calon Mitra Lain</h4>
-              Bersama-sama, kami ingin menunjukkan bahwa bisnis travel umrah
-              bisa dikelola dengan profesional, modern, dan berdaya saing
-              tinggi.
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <p class="headline" data-aos="fade-up" data-aos-duration="1200">
-        <span class="rotating-icon">📢</span> Wujudkan bisnis travel umrah yang
-        sukses dan profesional bersama Umaroh.com!
-      </p>
-
+    <section id="solution" class="px-3 px-lg-5 pt-5">
       <div class="text-center">
-        <a
+        <img
+          class="welcome-img-2"
+          src="/assets/ASET 3.png"
+          alt=""
           data-aos="fade-up"
-          data-aos-duration="1200"
-          href="https://chat.whatsapp.com/JmbK32J0HRkFv05RrM9agr"
-          class="btn btn-success btn-lg"
+          data-aos-duration="1300"
+        />
+
+        <h2
+          class="moderniz text-light mt-5"
+          data-aos="fade-up"
+          data-aos-duration="1300"
         >
-          KLIK DISINI UNTUK MENJADI MITRA
-        </a>
+          UMAROH HADIR
+        </h2>
+        <h2
+          class="moderniz text-light"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+        >
+          SEBAGAI SOLUSI
+        </h2>
+        <p class="p-lg-5 p-3" data-aos="fade-up" data-aos-duration="1000">
+          Umaroh.com, di bawah naungan PT Nawaitul Umrah Haji, merupakan startup
+          teknologi pertama di Indonesia yang menghadirkan platform digital
+          terintegrasi untuk layanan end-to-end ibadah umroh dan haji. Visi kami
+          adalah menjadi platform umroh dan haji digital nomor satu di Asia
+          Tenggara—menjadikan perjalanan ibadah lebih mudah, aman, dan
+          transparan melalui solusi teknologi yang inovatif dan berorientasi
+          pada kepuasan pengguna.
+        </p>
       </div>
 
-      <p class="headline-2" data-aos="fade-up" data-aos-duration="1000">
-        Kesulitan di Era Digital yang akan kita bantu dengan WEBINAR GRATIS by
-        <img class="zoom" src="/assets/logo/zoom.png" alt="" />
-      </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-lg-start text-center">
+            <img data-aos="fade-up-right" data-aos-duration="1300" class="owner" src="/assets/ASET 4.png" alt="" />
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+            <div >
+              <h3 data-aos="fade-left" data-aos-duration="1300" class="text-light moderniz">YULENDRA PRASETYO, S.T.,MBA</h3>
+              <p data-aos="fade-left" data-aos-duration="1500">
+                Seorang profesional berpengalaman dengan lebih dari 20 tahun
+                dalam bidang Strategic Management, Business Strategy, dan
+                Continuous Improvement berperan penting sebagai Head of Strategy
+                di Astra Mining Group, bertanggung jawab atas pengembangan dan
+                implementasi strategi-strategi utama perusahaan. Pengalaman pada
+                perusahaan besar seperti Gajah Tunggal Group memimpin lebih dari
+                1.600 karyawan sebagai seorang Eksekutif yang berfokus pada
+                peningkatan kinerja dan efisiensi operasional. Selain kiprah
+                korporasi, Pak Yulendra juga berkontribusi sebagai dosen di
+                Program MBA Sekolah Bisnis dan Manajemen Institut Teknologi
+                Bandung (SBM ITB) Pengalaman mendalam di berbagai sektor,
+                termasuk industri pertambangan, otomotif, properti, dan ritel,
+                yang memperkaya perspektifnya dalam membangun strategi yang
+                adaptif dan berdaya saing tinggi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-8 order-2 order-md-1 d-flex align-items-center">
+            <div >
+              <h3 data-aos="fade-up-right" data-aos-duration="1300" class="text-light text-lg-end text-start moderniz">
+                H. AGUS SOFIANDI, S.Pi
+              </h3>
+              <p data-aos="fade-up-right" data-aos-duration="1500" class="text-lg-end text-start">
+                Seorang kelahiran Surabaya lulusan Institut Pertanian Bogor,
+                memulai karir dengan berbisnis, banyak usaha yang lahir dan
+                mencapai kesuksesan, koneksi dan jaringan yang luas menjadi
+                dasar lahirnya bisnis-bisnis yang dijalani, dari berbagai
+                industri mulai dari industri perikanan, industri pertanian,
+                industri teknologi dan lainnya.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 order-1 order-md-2 text-lg-end text-center">
+            <img data-aos="fade-left" data-aos-duration="1300" class="owner" src="/assets/ASET 5.png" alt="" />
+          </div>
+        </div>
+      </div>
     </section>
+    <section id="kenapa"></section>
+    <section id="footer"></section>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Umaroh.com - All Right Reserved</p>
-    </footer>
-
-    <div class="whatsapp-container">
+    <div class="whatsapp-container" data-aos-duration="1600" data-aos="zoom-in">
       <!-- Bubble WhatsApp -->
       <a
         href="https://chat.whatsapp.com/JmbK32J0HRkFv05RrM9agr"
@@ -971,11 +526,6 @@
       </a>
     </div>
 
-    <!-- ---------------------------------------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------------------------------------------- -->
-    <!-- Link ke Lightbox JS -->
-    <!-- Link ke Bootstrap JS dan Popper.js untuk interaktivitas -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
@@ -988,9 +538,5 @@
     ></script>
 
     <script src="/script.js"></script>
-    <!-- Link ke Lightbox JS -->
-    <!-- ---------------------------------------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------------------------------------------- -->
   </body>
 </html>
