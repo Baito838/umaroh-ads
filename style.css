@@ -16,6 +16,11 @@
   display: none;
 }
 
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+}
+
 .poppins-black-italic {
   font-family: "Poppins", serif;
   font-weight: 900;
@@ -58,8 +63,9 @@ h6 {
 }
 
 section {
-  position: relative;
+  /* position: relative; */
   width: 100%;
+  overflow-x: hidden;
 }
 
 .btn-success {
@@ -251,7 +257,6 @@ section {
 
 #welcome .welcome-img {
   width: clamp(250px, 45vw, 600px);
-  z-index: 2;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -259,20 +264,14 @@ section {
 /* -------------------------------------------------------------------------------------- */
 
 #masalah {
-}
-
-#masalah .masalah-card {
-  position: relative;
   width: 100%;
-  margin-top: -30px;
-  height: 100vh;
   background-color: white;
   border-top-left-radius: clamp(20px, 5vw, 40px); /* Border radius atas kiri */
   border-top-right-radius: clamp(
     20px,
     5vw,
     40px
-  ); /* Border radius atas kanan */
+  );
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -280,8 +279,6 @@ section {
 /* -------------------------------------------------------------------------------------- */
 
 #masalah-2 {
-  min-height: 100vh;
-  position: relative;
   background: linear-gradient(180deg, white, var(--yellow));
 }
 
@@ -290,12 +287,38 @@ section {
 /* -------------------------------------------------------------------------------------- */
 
 #solution {
+  position: relative;
 }
 
 #solution .welcome-img-2 {
   width: clamp(250px, 45vw, 600px);
 }
 
+.solution-img {
+  width: clamp(100px, 25vw, 200px);
+}
+
 .owner {
-    width: clamp(250px, 30vw, 300px);
+  width: clamp(250px, 25vw, 300px);
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+#kenapa {
+  margin-top: 100px;
+}
+
+.why-img {
+  width: clamp(250px, 30vw, 500px);
+}
+
+.kenapa-card {
+  background-color: white;
+  width: 100%;
+  border-top-left-radius: clamp(20px, 5vw, 40px); /* Border radius atas kiri */
+  border-top-right-radius: clamp(20px, 5vw, 40px);
+  min-height: 100vh;
+  position: relative;
+  z-index: 3;
 }
