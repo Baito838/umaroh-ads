@@ -71,6 +71,9 @@ section {
 
 .btn-success {
   background-color: #25d366;
+  outline: none; /* Menghapus outline */
+  border: none;
+  font-size: 1.5rem;
 }
 
 .problem-list {
@@ -95,7 +98,7 @@ section {
 /* Gaya tambahan untuk carousel */
 .carousel-item img {
   object-fit: contain; /* Pastikan gambar menyesuaikan ukuran dengan carousel */
-  max-height: 300px;
+  max-height: 600px;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -254,6 +257,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 #welcome .welcome-img {
@@ -267,14 +271,18 @@ section {
 #masalah {
   width: 100%;
   background-color: white;
-  border-top-left-radius: clamp(20px, 5vw, 40px); /* Border radius atas kiri */
-  border-top-right-radius: clamp(
-    20px,
-    5vw,
-    40px
-  );
+  border-top-left-radius: 40px; /* Border radius atas kiri */
+  border-top-right-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
 
-  min-height: min-content;
+.masalah-card {
+  position: relative;
+}
+
+.img-problems {
+  width: 110px;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -284,7 +292,9 @@ section {
 #masalah-2 {
   background: linear-gradient(180deg, white, var(--yellow));
   height: min-content;
-  
+  position: relative;
+  overflow: hidden;
+
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -294,6 +304,7 @@ section {
 #solution {
   position: relative;
   height: min-content;
+  overflow: hidden;
 }
 
 #solution .welcome-img-2 {
@@ -312,7 +323,7 @@ section {
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 #kenapa {
-  margin-top: 100px;
+  margin-top: 10px;
   
 }
 
