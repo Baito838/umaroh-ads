@@ -313,6 +313,7 @@ section {
 /* -------------------------------------------------------------------------------------- */
 #kenapa {
   margin-top: 100px;
+  
 }
 
 .why-img {
@@ -327,4 +328,29 @@ section {
   min-height: 100vh;
   position: relative;
   z-index: 3;
+  padding-top: 50px;
+  background: linear-gradient(180deg, white, var(--yellow));
+}
+
+.kenapa-image-mini {
+  width: clamp(100px, 25vw, 200px);
+ }
+
+ .why-list  {
+  list-style: none; /* Hilangkan bullet bawaan */
+  padding: 0;
+}
+.why-list li {
+  position: relative;
+  padding-left: 30px; /* Beri ruang untuk ikon check.why-list list */
+  margin-bottom: 10px;
+}
+.why-list li::before {
+  content: "✔"; /* Simbol checklist */
+  color: green; /* Warna hijau */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.2;
 }
